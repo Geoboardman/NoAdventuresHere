@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EE6F624-2108-4F2E-BC85-0CA4BE8B1381}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sanctuary</RootNamespace>
+    <AssemblyName>Sanctuary</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Components\DataManager.cs" />
+    <Compile Include="Components\Player.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameScreens\BaseGameState.cs" />
+    <Compile Include="GameScreens\CharacterGeneratorScreen.cs" />
+    <Compile Include="GameScreens\ConversationScreen.cs" />
+    <Compile Include="GameScreens\GamePlayScreen.cs" />
+    <Compile Include="GameScreens\LoadGameScreen.cs" />
+    <Compile Include="GameScreens\SkillScreen.cs" />
+    <Compile Include="GameScreens\StartMenuScreen.cs" />
+    <Compile Include="GameScreens\TitleScreen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Game\Chests\Big Gold Chest.xml" />
+    <Content Include="Content\Game\Chests\Broken Crate.xml" />
+    <Content Include="Content\Game\Chests\Gold Chest.xml" />
+    <Content Include="Content\Game\Chests\Plain Chest.xml" />
+    <Content Include="Content\Game\Chests\Rusty Chest.xml" />
+    <Content Include="Content\Game\Classes\Fighter.xml" />
+    <Content Include="Content\Game\Classes\Priest.xml" />
+    <Content Include="Content\Game\Classes\Rogue.xml" />
+    <Content Include="Content\Game\Classes\Wizard.xml" />
+    <Content Include="Content\Game\Game.xml" />
+    <Content Include="Content\Game\Items\Armor\Chain Mail Boots.xml" />
+    <Content Include="Content\Game\Items\Armor\Chain Mail Gloves.xml" />
+    <Content Include="Content\Game\Items\Armor\Chain Mail Helm.xml" />
+    <Content Include="Content\Game\Items\Armor\Chain Mail.xml" />
+    <Content Include="Content\Game\Items\Armor\Leather Armor.xml" />
+    <Content Include="Content\Game\Items\Armor\Leather Boots.xml" />
+    <Content Include="Content\Game\Items\Armor\Leather Gloves.xml" />
+    <Content Include="Content\Game\Items\Armor\Leather Helm.xml" />
+    <Content Include="Content\Game\Items\Armor\Light Robes.xml" />
+    <Content Include="Content\Game\Items\Armor\Medium Robes.xml" />
+    <Content Include="Content\Game\Items\Armor\Studded Leather Armor.xml" />
+    <Content Include="Content\Game\Items\Armor\Studded Leather Boots.xml" />
+    <Content Include="Content\Game\Items\Armor\Studded Leather Gloves.xml" />
+    <Content Include="Content\Game\Items\Armor\Studded Leather Helm.xml" />
+    <Content Include="Content\Game\Items\Shield\Heavy Tower Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Large Kite Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Large Metal Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Large Wooden Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Medium Metal Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Medium Wooden Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Small Metal Shield.xml" />
+    <Content Include="Content\Game\Items\Shield\Small Wooded Shield.xml" />
+    <Content Include="Content\Game\Items\Weapon\Acolyte Staff.xml" />
+    <Content Include="Content\Game\Items\Weapon\Apprentice Staff.xml" />
+    <Content Include="Content\Game\Items\Weapon\Battle Axe.xml" />
+    <Content Include="Content\Game\Items\Weapon\Broad Sword.xml" />
+    <Content Include="Content\Game\Items\Weapon\Club.xml" />
+    <Content Include="Content\Game\Items\Weapon\Dagger.xml" />
+    <Content Include="Content\Game\Items\Weapon\Flail.xml" />
+    <Content Include="Content\Game\Items\Weapon\Great Sword.xml" />
+    <Content Include="Content\Game\Items\Weapon\Halberd.xml" />
+    <Content Include="Content\Game\Items\Weapon\Long Sword.xml" />
+    <Content Include="Content\Game\Items\Weapon\Mace.xml" />
+    <Content Include="Content\Game\Items\Weapon\Short Sword.xml" />
+    <Content Include="Content\Game\Items\Weapon\War Axe.xml" />
+    <Content Include="Content\Game\Keys\Golden Key.xml" />
+    <Content Include="Content\Game\Keys\Rusty Key.xml" />
+    <Content Include="Content\Game\Skills\Bartering.xml" />
+    <Content Include="Content\Game\Skills\Herbalism.xml" />
+    <Content Include="Content\Game\Skills\Poison Making.xml" />
+    <Content Include="Content\Game\Skills\Trap Making.xml" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XRpgLibrary\XRpgLibrary.csproj">
+      <Project>{1491e558-03eb-4848-9dc1-f9c572118582}</Project>
+      <Name>XRpgLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Game\Levels\Maps\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

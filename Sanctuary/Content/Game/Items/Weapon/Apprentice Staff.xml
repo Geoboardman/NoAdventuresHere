@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ItemClasses="RpgLibrary.ItemClasses">
+  <Asset Type="ItemClasses:WeaponData">
+    <Name>Apprentice Staff</Name>
+    <Type>Magic</Type>
+    <Price>20</Price>
+    <Weight>5</Weight>
+    <Equipped>false</Equipped>
+    <NumberHands>Two</NumberHands>
+    <AttackValue>6</AttackValue>
+    <AttackModifier>0</AttackModifier>
+    <DamageEffectData>
+      <Name>Apprentice Staff</Name>
+      <DamageType>Weapon</DamageType>
+      <AttackType>Health</AttackType>
+      <DieType>D6</DieType>
+      <NumberOfDice>1</NumberOfDice>
+      <Modifier>0</Modifier>
+    </DamageEffectData>
+    <AllowableClasses>
+      <Item>Wizard</Item>
+    </AllowableClasses>
+  </Asset>
+</XnaContent>

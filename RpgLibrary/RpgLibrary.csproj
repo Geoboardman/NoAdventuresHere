@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32D7C4D7-EEAD-48E4-B85B-F6E6FF9C0718}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RpgLibrary</RootNamespace>
+    <AssemblyName>RpgLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharacterClasses\AttributePair.cs" />
+    <Compile Include="CharacterClasses\Entity.cs" />
+    <Compile Include="CharacterClasses\EntityData.cs" />
+    <Compile Include="CharacterClasses\EntityDataManager.cs" />
+    <Compile Include="ConversationClasses\Conversation.cs" />
+    <Compile Include="ConversationClasses\ConversationManager.cs" />
+    <Compile Include="ConversationClasses\ConversationNode.cs" />
+    <Compile Include="ItemClasses\Armor.cs" />
+    <Compile Include="ItemClasses\ArmorData.cs" />
+    <Compile Include="ItemClasses\BaseItem.cs" />
+    <Compile Include="ItemClasses\Chest.cs" />
+    <Compile Include="ItemClasses\ChestData.cs" />
+    <Compile Include="ItemClasses\ItemDataManager.cs" />
+    <Compile Include="ItemClasses\ItemManager.cs" />
+    <Compile Include="ItemClasses\Key.cs" />
+    <Compile Include="ItemClasses\KeyData.cs" />
+    <Compile Include="ItemClasses\Reagent.cs" />
+    <Compile Include="ItemClasses\ReagentData.cs" />
+    <Compile Include="ItemClasses\Shield.cs" />
+    <Compile Include="ItemClasses\ShieldData.cs" />
+    <Compile Include="ItemClasses\Weapon.cs" />
+    <Compile Include="ItemClasses\WeaponData.cs" />
+    <Compile Include="Mechanics.cs" />
+    <Compile Include="Modifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestClasses\Quest.cs" />
+    <Compile Include="QuestClasses\QuestManager.cs" />
+    <Compile Include="QuestClasses\QuestStep.cs" />
+    <Compile Include="RolePlayingGame.cs" />
+    <Compile Include="SkillClasses\Recipe.cs" />
+    <Compile Include="SkillClasses\RecipeManager.cs" />
+    <Compile Include="SkillClasses\Skill.cs" />
+    <Compile Include="SkillClasses\SkillData.cs" />
+    <Compile Include="SkillClasses\SkillDataManager.cs" />
+    <Compile Include="SpellClasses\Spell.cs" />
+    <Compile Include="SpellClasses\SpellData.cs" />
+    <Compile Include="SpellClasses\SpellDataManager.cs" />
+    <Compile Include="TalentClasses\Talent.cs" />
+    <Compile Include="TalentClasses\TalentData.cs" />
+    <Compile Include="TalentClasses\TalentDataManager.cs" />
+    <Compile Include="TrapClasses\Trap.cs" />
+    <Compile Include="TrapClasses\TrapData.cs" />
+    <Compile Include="TrapClasses\TrapManager.cs" />
+    <Compile Include="WorldClasses\LevelData.cs" />
+    <Compile Include="WorldClasses\MapData.cs" />
+    <Compile Include="WorldClasses\MapLayerData.cs" />
+    <Compile Include="WorldClasses\TilesetData.cs" />
+    <Compile Include="WorldClasses\WorldManager.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
